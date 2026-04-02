@@ -21,7 +21,7 @@ The module exports a function that let you initialize a rounder function.
 `maxDecimals`: Maximum amount of decimals to return.
 
 ### `rounder(number, shouldFormat)`
-
+### `rounder(input, options)`
 `input`: The value to round. Accepts any type supported by [`bignumber.js`](https://github.com/MikeMcl/bignumber.js) package.
 `options`: An optional object to customize the formatting:
 
@@ -37,7 +37,7 @@ import { smartRound } from "smart-round";
 const rounder1 = smartRound(6, 0, 6);
 
 console.log(rounder1("1234.56789")); // '1234.57'
-console.log(rounder1("1234.56789", { shouldFormat: true })); // '1,234.56'
+console.log(rounder1("1234.56789", { shouldFormat: true })); // '1,234.57'
 
 const rounder2 = smartRound(4, 2, 6);
 
